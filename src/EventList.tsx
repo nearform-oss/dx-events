@@ -33,7 +33,7 @@ export default function EventList({
   countryName,
   dxEvents,
 }: {
-  readonly countryName: string | undefined;
+  readonly countryName: string;
   readonly dxEvents: DxEvent[];
 }) {
   const sortedEvents = dxEvents.toSorted((a, b) =>
@@ -41,9 +41,12 @@ export default function EventList({
   );
 
   return (
-    <div className="w-25% items-center overflow-y-auto p2 max-h-full">
+    <div className="w-full items-center overflow-y-auto p2">
       <div className="w-full items-center gap-2">
-        <div className="text-2xl font-bold">{countryName ?? <>&nbsp;</>}</div>
+        <div className="flex-row items-baseline gap-2">
+          <div className="text-2xl font-bold">{countryName}</div>
+          <div className="">{dxEvents.length} events</div>
+        </div>
         <div className="w-full gap-3">
           {sortedEvents.map((dxEvent) => (
             <EventCard

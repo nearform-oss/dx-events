@@ -81,11 +81,13 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="w-full flex-row items-stretch min-h-0">
-        <EventList
-          dxEvents={country.dxEvents}
-          countryName={country.geo?.properties?.NAME ?? 'All'}
-        />
+      <div className="w-full flex-row items-stretch min-h-0 h-full">
+        <div className="w-25% max-h-full overflow-hidden">
+          <EventList
+            dxEvents={country.dxEvents}
+            countryName={country.geo?.properties?.NAME ?? 'All'}
+          />
+        </div>
         <div className="w-75% justify-center overflow-hidden">
           <div className="w-full aspect-video">
             <ComposableMap className="w-full h-full" width={1280} height={720}>
