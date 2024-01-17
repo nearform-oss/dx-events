@@ -74,7 +74,7 @@ function App() {
   return (
     <div className="w-100dvw h-100dvh max-w-100dvw max-h-100dvh overflow-hidden items-center">
       <div className="w-full p2">
-        <div className="bg-nfGreen-100 items-center p3 text-nfMidnight-100 flex-row">
+        <div className="bg-nfGreen-100 items-center p3 text-nfMidnight-100 flex-row flex-wrap gap-2">
           <img src={logo} className="h-4rem" />
           <div className="text-3xl font-bold flex-grow-1 leading-none text-center">
             DX Events 2023
@@ -82,13 +82,13 @@ function App() {
         </div>
       </div>
       <div className="w-full flex-row items-stretch min-h-0 h-full">
-        <div className="w-25% max-h-full overflow-hidden">
+        <div className="w-25% lt-sm:w-40% max-h-full overflow-hidden">
           <EventList
             dxEvents={country.dxEvents}
             countryName={country.geo?.properties?.NAME ?? 'All'}
           />
         </div>
-        <div className="w-75% justify-center overflow-hidden">
+        <div className="w-75% lt-sm:w-60% justify-center overflow-hidden">
           <div className="w-full h-full">
             <ComposableMap className="w-full h-full" width={1280} height={720}>
               <ZoomableGroup zoom={1.5}>
