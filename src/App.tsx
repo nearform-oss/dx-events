@@ -26,7 +26,7 @@ const eventList = events
 
 const defaultCountry: SelectedCountry = {
   geo: undefined,
-  dxEvents: [],
+  dxEvents: eventList,
 };
 
 function eventCountToColor(count: number) {
@@ -83,10 +83,8 @@ function App() {
       </div>
       <div className="w-full flex-row items-stretch min-h-0">
         <EventList
-          dxEvents={country === defaultCountry ? eventList : country.dxEvents}
-          countryName={
-            country === defaultCountry ? 'All' : country.geo?.properties?.NAME
-          }
+          dxEvents={country.dxEvents}
+          countryName={country.geo?.properties?.NAME ?? 'All'}
         />
         <div className="w-75% justify-center overflow-hidden">
           <div className="w-full aspect-video">
