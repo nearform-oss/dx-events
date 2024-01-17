@@ -14,7 +14,14 @@ import logo from './assets/NF_Logo_DeepNavy.svg';
 
 const eventList = events
   .split('\n')
-  .map((line) => line.split(','))
+  .map((line) =>
+    line
+      // Commas followed by even number of quotes (including 0 quotes)
+      // https://stackoverflow.com/a/48275050/880509
+      .split(/,(?=(?:[^"]*"[^"]*")*(?![^"]*"))/)
+      // Strip any remaining quotes
+      .map((cell) => cell.replaceAll('"', '')),
+  )
   .slice(1) as DxEvent[];
 
 const defaultCountry: SelectedCountry = {
@@ -74,12 +81,14 @@ function App() {
           </div>
         </div>
       </div>
-      <div className="w-full flex-row items-stretch">
+      <div className="w-full flex-row items-stretch min-h-0">
         <EventHorizontalList
-          dxEvents={country.dxEvents}
-          countryName={country.geo?.properties?.NAME}
+          dxEvents={country === defaultCountry ? eventList : country.dxEvents}
+          countryName={
+            country === defaultCountry ? 'All' : country.geo?.properties?.NAME
+          }
         />
-        <div className="w-75% justify-center">
+        <div className="w-75% justify-center overflow-hidden">
           <div className="w-full aspect-video">
             <ComposableMap className="w-full h-full" width={1280} height={720}>
               <ZoomableGroup>
@@ -90,10 +99,6 @@ function App() {
                         (event) =>
                           event[eventCountryIndex] === geo.properties.NAME,
                       );
-                      if (geo.properties.NAME.toLowerCase() === 'italy') {
-                        console.log(dxEvents);
-                        console.log(geo);
-                      }
 
                       const isSelected =
                         selectedCountry && selectedCountry.geo === geo;
@@ -114,7 +119,6 @@ function App() {
                             setHoverCountry(undefined);
                           }}
                           onClick={() => {
-                            console.log('click');
                             setSelectedCountry({geo, dxEvents});
                           }}
                         />
