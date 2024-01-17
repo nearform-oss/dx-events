@@ -77,7 +77,7 @@ function App() {
         <div className="bg-nfGreen-100 items-center p3 text-nfMidnight-100 flex-row flex-wrap gap-2">
           <img src={logo} className="h-4rem" />
           <div className="text-3xl font-bold flex-grow-1 leading-none text-center">
-            DX Events 2023
+            DX Events 2023 Hello
           </div>
         </div>
       </div>
