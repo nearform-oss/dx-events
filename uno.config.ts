@@ -170,6 +170,6 @@ export default defineConfig({
       /* eslint-enable @typescript-eslint/naming-convention */
     },
   },
-  safelist: Array.from({length: 9}, (_, i) => `fill-red-${(i + 1) * 100}`),
+  // Safelist: Array.from({length: 9}, (_, i) => `fill-red-${(i + 1) * 100}`),
   // Safelist: Array.from({length: 101}, (_, i) => `from-${i}%`),
 });
