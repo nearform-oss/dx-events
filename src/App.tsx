@@ -9,7 +9,7 @@ import clsx from 'clsx';
 import geo from './assets/ne_110m_admin_0_countries.json';
 import events from './assets/events.csv?raw';
 import {type DxEvent, eventCountryIndex} from './dx-event';
-import EventHorizontalList from './EventHorizontalList';
+import EventList from './EventList';
 import logo from './assets/NF_Logo_DeepNavy.svg';
 
 const eventList = events
@@ -82,7 +82,7 @@ function App() {
         </div>
       </div>
       <div className="w-full flex-row items-stretch min-h-0">
-        <EventHorizontalList
+        <EventList
           dxEvents={country === defaultCountry ? eventList : country.dxEvents}
           countryName={
             country === defaultCountry ? 'All' : country.geo?.properties?.NAME

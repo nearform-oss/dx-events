@@ -17,7 +17,7 @@ function EventCard({dxEvent}: {readonly dxEvent: DxEvent}) {
   );
 }
 
-export default function EventHorizontalList({
+export default function EventList({
   countryName,
   dxEvents,
 }: {
