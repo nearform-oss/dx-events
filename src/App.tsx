@@ -6,7 +6,7 @@ import {
   ZoomableGroup,
 } from 'react-simple-maps';
 import clsx from 'clsx';
-import geo from './assets/ne_110m_admin_0_countries.json';
+import geo from './assets/ne_50m_admin_0_countries.json';
 import events from './assets/events.csv?raw';
 import {type DxEvent, eventCountryIndex} from './dx-event';
 import EventList from './EventList';
@@ -107,7 +107,7 @@ function App() {
                           key={geo.rsmKey}
                           geography={geo}
                           className={clsx(
-                            'hover:fill-nfGreen-80 pressed:red-8 stroke-nfGreen-100 focus:outline-none active:border-none',
+                            'hover:fill-nfGreen-80 pressed:red-8 stroke-nfGreen-100 focus:outline-none active:border-none stroke-[0.5px]',
                             isSelected
                               ? 'fill-nfGreen-80'
                               : eventCountToColor(dxEvents.length),
