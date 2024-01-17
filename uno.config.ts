@@ -43,27 +43,35 @@ export default defineConfig({
       fonts: {
         // Mono: ['Inconsolata'],
         mono: ['Roboto Mono'],
-        sans: [
-          // {
-          //   name: 'Jura',
-          //   weights: ['400', '600'],
-          // },
-          // {
-          //   name: 'Saira Condensed',
-          //   weights: ['400', '600'],
-          // },
-          {
-            name: 'Pixelify Sans',
-            weights: ['400', '500'],
-          },
-          // I like Abel, but it is only 400 weight and the bold is ugly on safari.
-          // {
-          //   name: 'Abel',
-          //   weights: ['400', '600'],
-          // },
-        ],
+        // Sans: [
+        //   // {
+        //   //   name: 'Jura',
+        //   //   weights: ['400', '600'],
+        //   // },
+        //   // {
+        //   //   name: 'Saira Condensed',
+        //   //   weights: ['400', '600'],
+        //   // },
+        //   {
+        //     name: 'Pixelify Sans',
+        //     weights: ['400', '500'],
+        //   },
+        //   // I like Abel, but it is only 400 weight and the bold is ugly on safari.
+        //   // {
+        //   //   name: 'Abel',
+        //   //   weights: ['400', '600'],
+        //   // },
+        // ],
         // Sans: ['Saira', 'Abel:400,600'],
-        // inter: [
+        inter: {
+          name: 'Inter',
+          weights: ['400', '600', '700'],
+        },
+        biter: {
+          name: 'Bitter',
+          weights: ['400', '600', '700'],
+        },
+        // Inter: [
         //   {
         //     name: 'Inter',
         //     weights: ['400', '600', '700'],
