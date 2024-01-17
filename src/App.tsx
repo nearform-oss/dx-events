@@ -64,13 +64,13 @@ function App() {
   const country = hoverCountry ?? selectedCountry ?? defaultCountry;
 
   return (
-    <div className="w-100dvw h-100dvh items-center max-w-100dvw max-h-100dvh overflow-hidden">
+    <div className="w-100dvw h-100dvh items-stretch max-w-100dvw max-h-100dvh overflow-hidden flex-row">
       <EventHorizontalList
         dxEvents={country.dxEvents}
         countryName={country.geo?.properties?.NAME}
       />
-      <div className="flex-grow-1 flex-shrink-1 w-auto aspect-video">
-        <div className="h-full aspect-video">
+      <div className="w-75% justify-center">
+        <div className="w-full aspect-video">
           <ComposableMap className="w-full h-full" width={1280} height={720}>
             <ZoomableGroup>
               <Geographies geography={geo}>

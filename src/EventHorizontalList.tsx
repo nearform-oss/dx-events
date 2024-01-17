@@ -3,7 +3,19 @@ import {
   type DxEvent,
   eventPersonIndex,
   eventTitleIndex,
+  eventDateIndex,
 } from './dx-event';
+
+function EventCard({dxEvent}: {readonly dxEvent: DxEvent}) {
+  return (
+    <div className="gap-1 p2 bg-nfPurple-100 text-white animate-fade-in">
+      <div className="text-sm font-mono">{dxEvent[eventDateIndex]}</div>
+      <div className="text-lg font-bold">{dxEvent[eventNameIndex]}</div>
+      <div className="font-italic text-base">{dxEvent[eventTitleIndex]}</div>
+      <div className="text-base">{dxEvent[eventPersonIndex]}</div>
+    </div>
+  );
+}
 
 export default function EventHorizontalList({
   countryName,
@@ -12,57 +24,23 @@ export default function EventHorizontalList({
   readonly countryName: string | undefined;
   readonly dxEvents: DxEvent[];
 }) {
-  if (dxEvents.length === 0) {
-    return (
-      <>
-        <div className="flex-grow-0 flex-shrink-0 text-lg">&nbsp;</div>
-        <div className="flex-grow-0 flex-shrink-0 w-full">
-          <div className="flex-row text-sm flex-nowrap overflow-x-scroll">
-            <div>
-              <div>&nbsp;</div>
-              <div>&nbsp;</div>
-            </div>
-          </div>
-        </div>
-      </>
-    );
-  }
-
-  const groupedEvents = new Map<string, DxEvent[]>();
-  for (const dxEvent of dxEvents) {
-    groupedEvents.set(dxEvent[eventNameIndex], [
-      ...(groupedEvents.get(dxEvent[eventNameIndex]) ?? []),
-      dxEvent,
-    ]);
-  }
-
-  console.log(groupedEvents);
+  const sortedEvents = dxEvents.toSorted(
+    (a, b) => a[eventDateIndex].localeCompare(b[eventDateIndex]),
+  );
 
   return (
-    <>
-      <div className="flex-grow-0 flex-shrink-0 text-lg">{countryName}</div>
-      <div className="flex-grow-0 flex-shrink-0 w-full">
-        <div className="flex-row text-sm flex-nowrap overflow-x-scroll gap-2">
-          {Array.from(groupedEvents.entries()).map(([eventName, dxEvents]) => (
-            <div
-              // Key={`${dxEvent[eventNameIndex]}${dxEvent[eventPersonIndex]}${dxEvent[eventTitleIndex]}`}
-              key={eventName}
-            >
-              <div className="text-nowrap flex-grow">{eventName}</div>
-              <div className="flex-row">
-                {dxEvents.map((dxEvent) => (
-                  <div
-                    key={`${eventName}${dxEvent[eventPersonIndex]}${dxEvent[eventTitleIndex]}`}
-                    className="text-nowrap flex-grow text-nfGreen-600"
-                  >
-                    {dxEvent[eventPersonIndex]}
-                  </div>
-                ))}
-              </div>
-            </div>
+    <div className="w-25% items-center overflow-y-auto p2 max-h-full">
+      <div className='w-full items-center gap-2'>
+        <div className="text-2xl font-bold">{countryName ?? <>&nbsp;</>}</div>
+        <div className="w-full gap-3">
+          {sortedEvents.map((dxEvent) => (
+            <EventCard
+              key={`${dxEvent[eventNameIndex]}${dxEvent[eventPersonIndex]}${dxEvent[eventTitleIndex]}`}
+              dxEvent={dxEvent}
+            />
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }
