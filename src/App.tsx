@@ -34,21 +34,21 @@ function eventCountToColor(count: number) {
     return 'fill-white';
   }
 
-  if (count === 1) {
-    return 'fill-nfBlue-10';
-  }
-
-  if (count === 2) {
+  if (count <= 2) {
     return 'fill-nfBlue-30';
   }
 
-  if (count === 3) {
+  if (count <= 4) {
     return 'fill-nfBlue-50';
   }
 
-  if (count === 4) {
+  if (count <= 6) {
     return 'fill-nfBlue-80';
   }
+
+  // If (count === 4) {
+  //   return 'fill-nfBlue-80';
+  // }
 
   return 'fill-nfBlue-100';
 }
@@ -119,7 +119,11 @@ function App() {
                             setHoverCountry(undefined);
                           }}
                           onClick={() => {
-                            setSelectedCountry({geo, dxEvents});
+                            setSelectedCountry((currentCountry) =>
+                              currentCountry?.geo === geo
+                                ? undefined
+                                : {geo, dxEvents},
+                            );
                           }}
                         />
                       );
