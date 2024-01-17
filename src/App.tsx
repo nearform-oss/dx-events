@@ -89,9 +89,9 @@ function App() {
           />
         </div>
         <div className="w-75% justify-center overflow-hidden">
-          <div className="w-full aspect-video">
+          <div className="w-full h-full">
             <ComposableMap className="w-full h-full" width={1280} height={720}>
-              <ZoomableGroup>
+              <ZoomableGroup zoom={1.5}>
                 <Geographies geography={geo}>
                   {({geographies}: {geographies: Geo[]}) =>
                     geographies.map((geo) => {
