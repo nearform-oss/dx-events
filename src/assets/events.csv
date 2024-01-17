@@ -1,0 +1,67 @@
+Who,Event Date,ISO Date,Country,Event Name,Presentation Title
+Marco,14/04/2023,2023-04-14,Germany,Node Congress,Measuring the cost of a GraphQL Query
+Marco,09/05/2023,2023-05-09,Canada,OpenJS Collaborators Summit,Let's automate Node dependency update
+Marco,12/05/2023,2023-05-12,Netherlands,AppDevCon,Writing a full-text search engine in TypeScript
+Marco,27/06/2023,2023-06-27,Italy,Oracolo del test,Exploring Node.js test runner
+Marco,30/06/2023,2023-06-30,Italy,Working Software Conf,OWASP top 10 vulnerabilities in Node.js
+Marco,03/07/2023,2023-07-03,Spain,DevBcn,Measuring the cost of a GraphQL Query
+Marco,25/08/2023,2023-08-25,United States of America,Javascript & Friends,Measuring the cost of a GraphQL Query
+Marco,07/09/2023,2023-09-07,Italy,Schrödinger Hat,Measuring the cost of a GraphQL Query
+Marco,19/09/2023,2023-09-19,Spain,Open Source Summit Europe - OpenJS World,OWASP top 10 vulnerabilities in Node.js
+Marco,23/09/2023,2023-09-23,Italy,Come to Code,Measuring the cost of a GraphQL Query
+Marco,11/10/2023,2023-10-11,Morocco,Devoxx Morocco,OWASP top 10 vulnerabilities in Node.js
+Marco,30/10/2023,2023-10-30,Zambia,PI-23 Community Meeting,OWASP top 10 vulnerabilities in Node.js
+Marco,06/11/2023,2023-11-06,Ireland,NodeConf EU,Your First Node.js Contribution
+Marco,06/11/2023,2023-11-06,Ireland,NodeConf EU,OWASP top 10 vulnerabilities in Node.js
+Marco,19/11/2023,2023-11-19,Italy,Pescara DevFest,Measuring the cost of a GraphQL Query
+Marco,19/11/2023,2023-11-19,Italy,Pescara DevFest,Your First Node.js Contribution
+Marco,25/11/2023,2023-11-25,Italy,Milano Cloud DevFest,"Developers in Danger: How supply chain attacks target devs, not production"
+Marco,02/12/2023,2023-12-02,Italy,Devfest Alps 2023,Exploring Node.js test runner
+Marco,07/12/2023,2023-12-07,Germany,TestJS Summit,Exploring Node.js test runner
+Marco,11/12/2023,2023-12-11,Singapore,International JavaScript Conference,OWASP top 10 vulnerabilities in Node.js
+Marco,11/12/2023,2023-12-11,Singapore,International JavaScript Conference,Measuring the cost of a GraphQL Query
+Rafael,26/01/2023,2023-01-26,Virtual,Node.js Global Summit (Senior Track),"Lies, Damn Lies, and Benchmark"
+Rafael,28/01/2023,2023-01-28,Brazil,Google Developers Group (SJC),It's all about performance
+Rafael,02/03/2023,2023-03-02,Brazil,NodeBR - Advanced Node.js,It's all about performance
+Rafael,24/03/2023,2023-03-24,Italy,OSDay Florence,5 Ways you could have hacked Node.js
+Rafael,31/03/2023,2023-03-31,United Kingdom,City.js London,Maximizing App Efficiency with Clinic.js
+Rafael,24/04/2023,2023-04-24,Brazil,City.js São Paulo,5 Ways You Could Have Hacked Node.js
+Rafael,09/05/2023,2023-05-09,Canada,Node.js Collab Summit,The State of Node.js Security 2023
+Rafael,05/06/2023,2023-06-05,Virtual,JSNation,5 Ways You Could Have Hacked Node.js
+Rafael,15/06/2023,2023-06-15,Brazil,TDC Innovation,5 Ways You Could Have Hacked Node.js
+Rafael,22/07/2023,2023-07-22,Brazil,NodeBR - Experience,The State of Node.js Security
+Rafael,18/09/2023,2023-09-18,Spain,OpenSSF Day EU,The journey of the Node.js Permission Model
+Rafael,19/09/2023,2023-09-19,Spain,Open Source Summit Europe,Improving the security of a large Open Source project one step at a time
+Rafael,22/09/2023,2023-09-22,Virtual,Grace Hopper Conference,Node.js Project
+Rafael,26/09/2023,2023-09-26,China,OpenJS World,Improving the security of a large Open Source project one step at a time
+Rafael,6/11/2023,2023-11-06,Ireland,NodeConf EU 2023,The journey of the Node.js Permission Model
+Rafael,7/11/2023,2023-11-07,Ireland,NodeConf EU 2023,Your First Node.js Contribution
+Rafael,17/11/2023,2023-11-17,Colombia,JSConf Colombia - Final Edition,"Lies, Damn Lies, and Benchmark"
+Rafael,6/12/2023,2023-12-06,France,Open Source Experience,5 Ways You Could Have Hacked Node.js
+Paolo,14/01/2023,2023-01-14,Italy,DevFest Alps 2023,The tale of avoiding a time-based DDOS attack in Node.js
+Paolo,23/01/2023,2023-01-23,England,NDC London 2023,Maths or magic? End-to-end encryption explained with art
+Paolo,15/02/2023,2023-02-15,United States of America,DeveloperWeek Javascript Conference 2023,Do not break GraphQL extend it!
+Paolo,16/03/2023,2023-03-16,Italy,Milan WebDay 2023,The last 5 years of streams in Node.js
+Paolo,28/03/2023,2023-03-28,Virtual,CodeMotion 2023 Workshop,Maths or magic? End-to-end encryption explained with art
+Paolo,07/04/2023,2023-04-07,Serbia,Codestantine 2023,The tale of avoiding a time-based DDOS attack in Node.js
+Paolo,14/04/2023,2023-04-14,Germany,NodeCongress 2023,The tale of avoiding a time-based DDOS attack in Node.js
+Paolo,08/05/2023,2023-05-08,Canada,OpenSource Summit North America 2023,Node.js HTTP parser what's going on?
+Paolo,14/07/2023,2023-07-14,Mexico,Security BSides CDMX 2023,The tale of avoiding a time-based DDOS attack in Node.js
+Paolo,15/09/2023,2023-09-15,United States of America,Utah.js 2023,Do not break GraphQL extend it!
+Paolo,23/09/2023,2023-09-23,Italy,Come To Code 2023,Do not break GraphQL extend it!
+Paolo,30/09/2023,2023-09-30,Italy,NodeConf ITA 2023,The tale of avoiding a time-based DDOS attack in Node.js
+Paolo,19/10/2023,2023-10-19,Belgium,Full Stack Europe 2023,Maths or magic? End-to-end encryption explained with art
+Paolo,27/10/2023,2023-10-27,Italy,React.js Day 2023,Do not break GraphQL extend it!
+Paolo,06/11/2023,2023-11-06,Ireland,NodeConf EU 2023,Milo - a new HTTP parser for Node.js
+Paolo,18/11/2023,2023-11-18,Italy,DevFest Pescara 2023,From Smart Home to Smart Cats: extending my home automation to my pets
+Paolo,02/12/2023,2023-12-02,Italy,DevFest Bari 2023,The bees are important: use SDKs wisely
+Cody,14/01/2023,2023-01-14,Italy,DevFest Alps,Zen and the Art of Organizational Open Source
+Cody,21/02/2023,2023-02-21,Virtual,DeveloperWeek + ProductWorld (virtual),Design Tokens Systems and a Component's Journey From Design to Deployment
+Cody,14/04/2023,2023-04-14,France,Devoxx France,IPFS - The Practical Bits
+Cody,09/05/2023,2023-05-09,Virtual,OpenJS Collaborators Summit,Zen and the Art of Open Source
+Cody,26/05/2023,2023-05-26,Sweden,DevSum,"Full-Stack JS Today: Fastify, GraphQL, and React"
+Cody,04/07/2023,2023-07-04,Spain,DevBcn,Decentralizing with QR Codes
+Cody,18/07/2023,2023-07-18,Germany,Kubernetes Community Days Munich,Zen and the Art of Open Source
+Cody,15/09/2023,2023-09-15,United States of America,UtahJS 2023,Decentralizing with QR Codes
+Cody,27/10/2023,2023-10-27,Portugal,Porto Tech Hub,IPFS - The Practical Bits
+Cody,07/12/2023,2023-12-07,France,Open Source Experience Paris,Modern Web APIs and Too Much of a Good Thing
