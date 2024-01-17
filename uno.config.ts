@@ -68,7 +68,7 @@ export default defineConfig({
           weights: ['400', '600', '700'],
           italic: true,
         },
-        biter: {
+        bitter: {
           name: 'Bitter',
           weights: ['400', '600', '700'],
         },
