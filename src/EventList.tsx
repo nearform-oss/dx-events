@@ -6,6 +6,19 @@ import {
   eventDateIndex,
   eventCountryIndex,
 } from './dx-event';
+import cody from './assets/cody.jpeg';
+import paolo from './assets/paolo.webp';
+import paula from './assets/paula.jpg';
+import marco from './assets/marco.webp';
+import rafael from './assets/rafael.jpg';
+
+const peopleMap = {
+  cody,
+  paolo,
+  paula,
+  marco,
+  rafael,
+};
 
 function EventCard({
   dxEvent,
@@ -14,6 +27,16 @@ function EventCard({
   readonly dxEvent: DxEvent;
   readonly showCountry: boolean;
 }) {
+  const person =
+    peopleMap[
+      dxEvent[eventPersonIndex].toLowerCase() as
+        | 'cody'
+        | 'paolo'
+        | 'paula'
+        | 'marco'
+        | 'rafael'
+    ];
+
   return (
     <div className="gap-1 p2 bg-nfPurple-100 text-white animate-fade-in">
       <div className="text-xs flex-row-reverse justify-between flex-wrap gap-2">
@@ -23,10 +46,19 @@ function EventCard({
         )}
       </div>
       <div className="text-lg font-bold">{dxEvent[eventNameIndex]}</div>
-      <div className="font-italic text-base pl-2">
-        {dxEvent[eventTitleIndex]}
+      <div className="flex-row lt-sm:flex-col items-center">
+        <div className="rounded-full h-12 w-12 overflow-hidden flex-shrink-0 flex-grow-0">
+          <img src={person} />
+        </div>
+        <div className="gap-1 flex-shrink-1 flex-grow-1">
+          <div className="font-italic text-base pl-2">
+            {dxEvent[eventTitleIndex]}
+          </div>
+          <div className="text-sm font-bold pl-2">
+            {dxEvent[eventPersonIndex]}
+          </div>
+        </div>
       </div>
-      <div className="text-sm font-bold pl-2">{dxEvent[eventPersonIndex]}</div>
     </div>
   );
 }
